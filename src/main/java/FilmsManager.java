@@ -2,9 +2,11 @@ public class FilmsManager {
     private String[] films = new String[0];
     private int limit;
     public FilmsManager() {
+        this.limit = 5;
 
     }
     public FilmsManager(int limit) {
+
         this.limit = limit;
     }
 
@@ -28,7 +30,7 @@ public class FilmsManager {
         } else {
             resultLength = limit;
         }
-        String[] tmp = new String[5];
+        String[] tmp = new String[resultLength];
         for ( int i=0; i < tmp.length; i++ ) {
             tmp [i] = films[films.length-1-i];
         }
